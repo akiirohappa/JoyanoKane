@@ -56,7 +56,7 @@ public class TapPoint : MonoBehaviour
             sprite.color = Color.white;
         }
         //一定距離を通過するとミスになる
-        if (Notes.Count > 0 && note.posGet() - audiocontroller.MusicTime <= -0.2)
+        if (Notes.Count > 0 && note.posGet() - audiocontroller.MusicTime <= -0.15)
         {
             Debug.Log("Miss!");
             waitTime = audiocontroller.MusicTime;
@@ -76,7 +76,7 @@ public class TapPoint : MonoBehaviour
     void Note_Jadge(Note note)
     {
             Debug.Log(note.posGet());
-        if (Mathf.Abs(audiocontroller.MusicTime - note.posGet()) < 0.07)
+        if (Mathf.Abs(audiocontroller.MusicTime - note.posGet()) < 0.05f)
         {
             Debug.Log("Great!");
             waitTime = audiocontroller.MusicTime;
@@ -88,7 +88,7 @@ public class TapPoint : MonoBehaviour
             Notes.Remove(Notes.Last());
             Destroy(note.gameObject);
         }
-        else if (Mathf.Abs(audiocontroller.MusicTime - note.posGet()) < 0.12)
+        else if (Mathf.Abs(audiocontroller.MusicTime - note.posGet()) < 0.1f)
         {
             Debug.Log("Nice!");
             waitTime = audiocontroller.MusicTime;
@@ -100,7 +100,7 @@ public class TapPoint : MonoBehaviour
             Notes.Remove(Notes.Last());
             Destroy(note.gameObject);
         }
-        else if (Mathf.Abs(audiocontroller.MusicTime - note.posGet()) < 0.2)
+        else if (Mathf.Abs(audiocontroller.MusicTime - note.posGet()) < 0.2f)
         {
             Debug.Log("Bad!");
             waitTime = audiocontroller.MusicTime;
