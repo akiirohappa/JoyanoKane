@@ -47,7 +47,7 @@ public class TapPoint : MonoBehaviour
             sprite.color = Color.red;
             if (Notes.Count > 0) Note_Jadge(note);
             else if (Notes.Count <= 0) Debug.Log("ﾉｰﾂｶﾞﾅｲﾖ");
-            audioSource.PlayOneShot(audioSource.clip);
+            audioSource.Play();
         }
 
         //対応するボタンを離したら判定

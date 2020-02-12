@@ -148,6 +148,7 @@ public class Audiocontroller : MonoBehaviour
     public void ComboReset()
     {
         Combo = 0;
+        ComboBonus = 1.0f;
         ComboText.enabled = false;
         ComboNaviText.enabled = false;
     }
