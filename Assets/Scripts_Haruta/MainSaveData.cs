@@ -61,8 +61,10 @@ public class MainSaveData : SingletonMonoBehaviour<MainSaveData>
     {
         if (File.Exists(Application.dataPath + "/MainSaveData.json"))
         {
+            AudioMixer mixer = audioMixer;
             string loadjson = File.ReadAllText(Application.dataPath + "/MainSaveData.json");
             JsonUtility.FromJsonOverwrite(loadjson, instance);
+            audioMixer = mixer;
             Debug.Log("File Load");
         }
         else
