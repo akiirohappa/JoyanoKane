@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Title : MonoBehaviour
 {
     public GameObject BackGround;
@@ -55,6 +55,10 @@ public class Title : MonoBehaviour
         RankObj.SetActive(true);
         rank = new Ranking();
         RankingTextSet();
+    }
+    public void GameStart()
+    {
+        SceneManager.LoadScene("otogeScene");
     }
     public void RankingTextSet()
     {
