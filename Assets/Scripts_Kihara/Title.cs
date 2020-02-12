@@ -5,21 +5,26 @@ using UnityEngine.UI;
 
 public class Title : MonoBehaviour
 {
+    public GameObject BackGround;
     public GameObject TitleObj;
     public GameObject MenuObj;
     public GameObject InfoObj;
     public GameObject RankObj;
     Ranking rank;
+    Material mat;
     // Start is called before the first frame update
     void Start()
     {
         ToTitle();
+        mat = BackGround.GetComponent<Image>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float scr = Mathf.Repeat(Time.time * 0.1f, 1);
+        Vector2 off = new Vector2(scr, 0);
+        mat.SetTextureOffset("_MainTex", off);
     }
     public void ToMenu()
     {
