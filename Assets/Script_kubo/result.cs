@@ -35,6 +35,10 @@ public class result : MonoBehaviour
         {
             text.text = "なかなかじゃな";
         }
+        else if(scoreint < 2000)
+        {
+            text.text = "もっとじゃもっと";
+        }
         else
         {
             text.text = "来年も頼むぞい";
