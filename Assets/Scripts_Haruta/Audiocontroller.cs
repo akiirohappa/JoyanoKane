@@ -66,9 +66,10 @@ public class Audiocontroller : MonoBehaviour
         data = streamReader.ReadToEnd();
         streamReader.Close();
         humenData = JsonUtility.FromJson<HumenData>(data);
+        res.MaxNote = humenData.jsonNoteDatas.Count;
 
         audioSource = gameObject.GetComponent<AudioSource>();
-//        audioSource.clip = Resources.Load("music/" + humenData.audioClipName)as AudioClip;
+        audioSource.clip = Resources.Load("music/" + humenData.audioClipName)as AudioClip;
         AudioClip audioClip = audioSource.clip;
         
                 for(int x = 0; x < humenData.jsonNoteDatas.Count; x++)
