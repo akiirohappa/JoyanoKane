@@ -1155,7 +1155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2460\uFF1A\u30B9\u30B3\u30A2\n\u2461\uFF1A\u30B3\u30F3\u30DC\u6570\n\u2462\uFF1A\u5224\u5B9A\u5834\u6240\n\u2463\uFF1A\u30EA\u30BA\u30E0\u30A2\u30A4\u30B3\u30F3\n\u5224\u5B9A\u306F\u3001\u300C\u826F\u300D\u300C\u53EF\u300D\u300C\u4E0D\u53EF\u300D\u304C\u3042\u308B\u3002\n\u30BF\u30A4\u30DF\u30F3\u30B0\u3088\u304FSpace\u30AD\u30FC\u3092\u62BC\u3059\u3093\u3058\u3083\uFF01"
+  m_Text: "\u2460\uFF1A\u30B9\u30B3\u30A2\n\u2461\uFF1A\u30B3\u30F3\u30DC\u6570\n\u2462\uFF1A\u5224\u5B9A\u5834\u6240\n\u2463\uFF1A\u30EA\u30BA\u30E0\u30A2\u30A4\u30B3\u30F3\n\u5224\u5B9A\u306F\u3001\u300C\u826F\u300D\u300C\u53EF\u300D\u300C\u4E0D\u53EF\u300D\u304C\u3042\u308B\u3002\n\u30BF\u30A4\u30DF\u30F3\u30B0\u3088\u304FSpace\u30AD\u30FC\u3092\u62BC\u3059\u3093\u3058\u3083\u3088"
 --- !u!222 &680261286
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1723,6 +1723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108192881234092398, guid: 54e80ea33195de749935d88b423d3a7f,
+        type: 3}
+      propertyPath: musicName
+      value: "\u61FA\u6094\u53C2\u308A"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54e80ea33195de749935d88b423d3a7f, type: 3}
