@@ -12,16 +12,26 @@ public class Title : MonoBehaviour
     public GameObject RankObj;
     Ranking rank;
     Material mat;
+    bool isTitle;
+    private void Awake()
+    {
+        ToTitle();
+        isTitle = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        ToTitle();
         mat = BackGround.GetComponent<Image>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(isTitle && Input.anyKeyDown)
+        {
+            isTitle = false;
+            ToMenu();
+        }
         float scr = Mathf.Repeat(Time.time * 0.1f, 1);
         Vector2 off = new Vector2(scr, 0);
         mat.SetTextureOffset("_MainTex", off);
@@ -35,6 +45,7 @@ public class Title : MonoBehaviour
     }
     public void ToTitle()
     {
+        isTitle = true;
         MenuObj.SetActive(false);
         TitleObj.SetActive(true);
         InfoObj.SetActive(false);

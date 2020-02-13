@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 7bd8d8a0f569c454ab0fc7f7130655a8
   - enabled: 1
-    path: Assets/Scripts_Haruta/otogeScene.unity
+    path: Assets/Scenes/otogeScene.unity
     guid: d071ab6d959768443a089a2191fee4d9
   m_configObjects: {}
