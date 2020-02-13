@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class result : MonoBehaviour
 {
     public Text score, combo,text;
-    public int scoreint, comboint;
+    public int scoreint, comboint,MaxNote;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,26 +18,18 @@ public class result : MonoBehaviour
     {
         score.text = scoreint + "人払";
         combo.text = comboint + "鳴";
-        
-        if (scoreint == 0)
+        int MaxScore = MaxNote * 100;
+        if (scoreint < MaxScore / 4)
         {
             text.text = "話にならん";
         }
-        else if(scoreint < 300)
-        {
-            text.text = "出直してまいれ";
-        }
-        else if(scoreint < 600)
+        else if(scoreint < MaxScore / 2)
         {
             text.text = "まぁまぁじゃな";
         }
-        else if(scoreint < 1200)
+        else if(scoreint < MaxScore / 2 + MaxScore / 4)
         {
             text.text = "なかなかじゃな";
-        }
-        else if(scoreint < 2000)
-        {
-            text.text = "もっとじゃもっと";
         }
         else
         {
