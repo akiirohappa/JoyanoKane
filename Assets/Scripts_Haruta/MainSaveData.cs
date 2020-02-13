@@ -33,14 +33,8 @@ public class MainSaveData : SingletonMonoBehaviour<MainSaveData>
             return;
         }
 
-        if(!Directory.Exists(Application.dataPath + "/Resources/HumenData"))
-        {
-            Directory.CreateDirectory(Application.dataPath + "/Resources/HumenData");
-        }
-        if (!Directory.Exists(Application.dataPath + "/Resources/Music"))
-        {
-            Directory.CreateDirectory(Application.dataPath + "/Resources/Music");
-        }
+        if(!Directory.Exists(Application.dataPath + "/Resources/HumenData")) Directory.CreateDirectory(Application.dataPath + "/Resources/HumenData");
+        if (!Directory.Exists(Application.dataPath + "/Resources/Music")) Directory.CreateDirectory(Application.dataPath + "/Resources/Music");
         //配列の初期化
         PlayMusicNames = new List<string>();
         FileLoad();

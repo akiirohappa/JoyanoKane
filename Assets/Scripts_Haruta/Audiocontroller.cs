@@ -31,6 +31,9 @@ public class Audiocontroller : MonoBehaviour
     private int MaxCombo = 0;
     public float ComboBonus = 1.0f;
 
+    private bool PlayFlag = false;
+
+
     public string filename;
 
 //    public HumenData humenData;
@@ -102,15 +105,16 @@ public class Audiocontroller : MonoBehaviour
     void Update()
     {
         MusicTime += Time.deltaTime;
-        if (MusicTime >= 0 && audioSource.isPlaying == false)
+        if (MusicTime >= 0 && audioSource.isPlaying == false && PlayFlag == false)
         {
+            PlayFlag = true;
             Debug.Log("Play");
             audioSource.Play();
         }
-        else if (MusicTime > audioSource.clip.length)
+        else if (MusicTime > audioSource.clip.length && PlayFlag == true)
         {
             Debug.Log("End");
-            MainSaveData.instance.StartCoroutine("Load", "Title");
+//            MainSaveData.instance.StartCoroutine("Load", "Title");
         }
         /*
         MusicTimeText.text = audioSource.time.ToString();
