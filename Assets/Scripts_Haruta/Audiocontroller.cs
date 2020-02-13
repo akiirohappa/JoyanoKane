@@ -36,10 +36,14 @@ public class Audiocontroller : MonoBehaviour
 
     public string filename;
 
-    //    public HumenData humenData;
+
+    public HumenData humenData;
+
+
     public result res;
     public Canvas Can;
     public Text Sco, Com;
+
     class NoteControl
     {
         public Note note;
@@ -52,29 +56,26 @@ public class Audiocontroller : MonoBehaviour
     {
         ComboText.enabled = false;
         ComboNaviText.enabled = false;
+
         res = Can.GetComponent<result>();
         Can.enabled = false;
-/*        string data = "";
+        string data = "";
+
         StreamReader streamReader;
         streamReader = new StreamReader(Application.dataPath + "/Resources/HumenData/" + MainSaveData.instance.MusicNameGet() + ".json");
         data = streamReader.ReadToEnd();
         streamReader.Close();
         humenData = JsonUtility.FromJson<HumenData>(data);
-*/
+
         audioSource = gameObject.GetComponent<AudioSource>();
 //        audioSource.clip = Resources.Load("music/" + humenData.audioClipName)as AudioClip;
         AudioClip audioClip = audioSource.clip;
-        /*
+        
                 for(int x = 0; x < humenData.jsonNoteDatas.Count; x++)
                 {
-                    NoteControl noteControl = new NoteControl();
-                    if(humenData.jsonNoteDatas[x].noteLine == 0)noteControl.tapPoint = Note1;
-
-                    if (humenData.jsonNoteDatas[x].noteValue == 1) noteControl.note = note;
-
-                    NoteMake(Instantiate(noteControl.note), noteControl.tapPoint, /*humenData.jsonNoteDatas[x].Time);
+                    NoteMake(Instantiate(note), Note, humenData.jsonNoteDatas[x].Time);
                 }
-                */
+               /* 
         NoteMake(Instantiate(note), Note, 1);
         NoteMake(Instantiate(note), Note, 2);
         NoteMake(Instantiate(note), Note, 3);
@@ -99,7 +100,7 @@ public class Audiocontroller : MonoBehaviour
         NoteMake(Instantiate(note), Note, 12.5f);
         NoteMake(Instantiate(note), Note, 13);
         NoteMake(Instantiate(note), Note, 13.5f);
-
+        */
         Debug.Log(audioClip.length);
         Debug.Log(UniBpmAnalyzer.AnalyzeBpm(audioClip));
     }
