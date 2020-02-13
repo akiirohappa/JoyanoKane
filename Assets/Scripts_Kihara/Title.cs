@@ -31,10 +31,16 @@ public class Title : MonoBehaviour
         {
             isTitle = false;
             ToMenu();
+            SePlay();
         }
         float scr = Mathf.Repeat(Time.time * 0.1f, 1);
         Vector2 off = new Vector2(scr, 0);
         mat.SetTextureOffset("_MainTex", off);
+    }
+    void SePlay()
+    {
+        Debug.Log("a");
+        GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
     }
     public void ToMenu()
     {
