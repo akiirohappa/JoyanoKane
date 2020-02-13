@@ -36,8 +36,10 @@ public class Audiocontroller : MonoBehaviour
 
     public string filename;
 
-//    public HumenData humenData;
-
+    //    public HumenData humenData;
+    public result res;
+    public Canvas Can;
+    public Text Sco, Com;
     class NoteControl
     {
         public Note note;
@@ -50,7 +52,8 @@ public class Audiocontroller : MonoBehaviour
     {
         ComboText.enabled = false;
         ComboNaviText.enabled = false;
-
+        res = Can.GetComponent<result>();
+        Can.enabled = false;
 /*        string data = "";
         StreamReader streamReader;
         streamReader = new StreamReader(Application.dataPath + "/Resources/HumenData/" + MainSaveData.instance.MusicNameGet() + ".json");
@@ -114,6 +117,9 @@ public class Audiocontroller : MonoBehaviour
         else if (MusicTime > audioSource.clip.length && PlayFlag == true)
         {
             Debug.Log("End");
+            res.scoreint = Score;
+            res.comboint = MaxCombo;
+            Can.enabled = true;
 //            MainSaveData.instance.StartCoroutine("Load", "Title");
         }
         /*
