@@ -23,7 +23,7 @@ public class MainSaveData : SingletonMonoBehaviour<MainSaveData>
     private AsyncOperation async;
     private Canvas canvas;
 
-    private string musicName;
+    public string musicName;
 
     public void Awake()
     {
