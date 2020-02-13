@@ -10,11 +10,16 @@ public class Ranking
     {
         RankingLoad();
     }
-    public void RankingAdd(int newScore)
+    public int RankingAdd(int newScore)
     {
+        int inRank = 0;
         int max = newScore;
         for(int i = 0;i < 5; i++)
         {
+            if(inRank == 0)
+            {
+                inRank = i + 1;
+            }
             if(rank.score[i] <= max)
             {
                 int n = rank.score[i];
@@ -23,6 +28,7 @@ public class Ranking
                 Debug.Log((i+1) +":"+ (rank.score[i]));
             }
         }
+        return inRank;
     }
     public void RankingLoad()
     {
