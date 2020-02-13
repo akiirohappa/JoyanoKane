@@ -2247,6 +2247,9 @@ MonoBehaviour:
   MusicTime: -3
   ComboBonus: 1
   filename: 
+  humenData:
+    audioClipName: 
+    jsonNoteDatas: []
   res: {fileID: 0}
   Can: {fileID: 2143933143}
   Sco: {fileID: 493606798}
@@ -2276,7 +2279,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7280553607112919365, guid: c3ea6a6173ba2a145b43f4fed7b6f439,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 12407c187c814874c82625f5bfa19147, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2587,7 +2590,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143933140}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -2709,6 +2712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4108192881234092398, guid: 54e80ea33195de749935d88b423d3a7f,
+        type: 3}
+      propertyPath: musicName
+      value: "\u61FA\u6094\u53C2\u308A"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54e80ea33195de749935d88b423d3a7f, type: 3}
