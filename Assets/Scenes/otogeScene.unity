@@ -2646,6 +2646,7 @@ MonoBehaviour:
   text: {fileID: 562778022}
   scoreint: 0
   comboint: 0
+  MaxNote: 0
 --- !u!1001 &4108192880834663824
 PrefabInstance:
   m_ObjectHideFlags: 0
