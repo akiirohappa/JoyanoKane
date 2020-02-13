@@ -118,10 +118,14 @@ public class Audiocontroller : MonoBehaviour
         }
         else if (MusicTime > audioSource.clip.length && PlayFlag == true)
         {
-            Debug.Log("End");
-            res.scoreint = Score;
-            res.comboint = MaxCombo;
-            Can.enabled = true;
+            if(Can.enabled == false)
+            {
+                Debug.Log("End");
+                res.scoreint = Score;
+                res.comboint = MaxCombo;
+                res.ResultView();
+                Can.enabled = true;
+            }
 //            MainSaveData.instance.StartCoroutine("Load", "Title");
         }
         /*
