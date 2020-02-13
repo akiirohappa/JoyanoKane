@@ -7,14 +7,20 @@ public class result : MonoBehaviour
 {
     public Text score, combo,text;
     public int scoreint, comboint,MaxNote;
+    Ranking ranking;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ranking = new Ranking();
     }
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    public void ResultView()
     {
         score.text = scoreint + "人払";
         combo.text = comboint + "鳴";
@@ -23,11 +29,11 @@ public class result : MonoBehaviour
         {
             text.text = "話にならん";
         }
-        else if(scoreint < MaxScore / 2)
+        else if (scoreint < MaxScore / 2)
         {
             text.text = "まぁまぁじゃな";
         }
-        else if(scoreint < MaxScore / 2 + MaxScore / 4)
+        else if (scoreint < MaxScore / 2 + MaxScore / 4)
         {
             text.text = "なかなかじゃな";
         }
@@ -35,6 +41,8 @@ public class result : MonoBehaviour
         {
             text.text = "来年も頼むぞい";
         }
-        
+
+        ranking.RankingAdd(scoreint);
+        ranking.RankingSave();
     }
 }
